@@ -1,5 +1,11 @@
 # Employee Management System with Admin and Employee Dashboards
 
+![Preview Image](/public/screenshots/employeeDashboard.png)
+
+![Preview Image](/public/screenshots/adminDashboard.png)
+
+![Preview Image](/public/screenshots/employeStatus.png)
+
 ## Overview
 This project is an **Employee Management System** built with **ReactJS** and styled using **Tailwind CSS**. The application allows an **Admin** to assign tasks to employees and provides employees with a dashboard to manage and track their tasks. The system uses **localStorage** to store and retrieve data, such as employee details, tasks, and admin login information.
 
