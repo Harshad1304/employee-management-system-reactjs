@@ -50,7 +50,7 @@ This project is an **Employee Management System** built with **ReactJS** and sty
 ## Login Credentials
 
 ### Admin
-- **Email**: `admin@example.com`
+- **Email**: `admin@me.com`
 - **Password**: `123`
 
 ### Employees
