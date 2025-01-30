@@ -1,18 +1,40 @@
-import React from 'react'
+import React from 'react';
+import { FiLogOut, FiUser } from 'react-icons/fi';
 
 function Header(props) {
-  console.log(props.data)
-
-  const logoutHandler = ()=>{
-    localStorage.setItem('loggedInUser','')
+  const logoutHandler = () => {
+    localStorage.setItem('loggedInUser', '');
     props.changeUser('');
-  }
+  };
+
   return (
-    <div className='flex items-center justify-between'> 
-        <h1 className='text-xl text-white'>Hello, <br /> <span className='font-bold text-2xl'>{props.data?.firstName?props.data.firstName:'Admin'}</span> </h1>
-        <button onClick={logoutHandler} className='px-4 py-2 bg-blue-300 cursor-pointer hover:bg-blue-200 rounded-2xl text-xl text-black'>Logout</button>
-    </div>
-  )
+    <header className="w-full bg-gray-800 py-4 px-6 shadow-lg">
+      <div className="flex items-center justify-between max-w-6xl mx-auto">
+        <div className="flex items-center gap-4">
+          <div className="p-3 bg-blue-500 rounded-full shadow-md">
+            <FiUser className="text-2xl text-white" />
+          </div>
+          <div>
+            <p className="text-sm text-gray-300 font-medium">Welcome back</p>
+            <h1 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-300">
+              {props.data?.firstName || 'Admin'}
+            </h1>
+          </div>
+        </div>
+
+        <button
+          onClick={logoutHandler}
+          className="flex items-center gap-2 px-6 py-3 bg-white/10 hover:bg-white/20 rounded-xl transition-all duration-200
+                   group hover:scale-105 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+        >
+          <FiLogOut className="text-xl text-gray-300 group-hover:text-white transition-colors" />
+          <span className="text-lg font-medium text-gray-300 group-hover:text-white transition-colors">
+            Logout
+          </span>
+        </button>
+      </div>
+    </header>
+  );
 }
 
-export default Header
+export default Header;

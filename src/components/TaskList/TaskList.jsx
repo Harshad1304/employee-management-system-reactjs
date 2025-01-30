@@ -37,36 +37,63 @@ console.log(filteredTasks)
     <>
     {/* buttons */}
 
-    <div className='mt-4 p-4 '>
-      <h2 className='mb-4 text-2xl font-semibold text-white underline underline-offset-8'>Tasks-filter :-</h2>
+    <div className='mt-6 p-6 bg-gray-800 rounded-xl shadow-lg'>
+  <h2 className='mb-6 text-3xl font-bold text-white text-center underline underline-offset-4 decoration-2'>
+    Task Filters
+  </h2>
 
-      {/* Active Tasks */}
-    <button  onClick={()=>setFilter('active')} className="px-4 py-2 bg-blue-500 text-black  text-xl rounded hover:bg-blue-600 active:scale-95 transition">
-  Active
-</button>
+  <div className='flex flex-wrap gap-4 '>
+    {/* Active Tasks */}
+    <button 
+      onClick={() => setFilter('active')}
+      className="px-6 py-3 bg-blue-500 text-white text-lg font-medium rounded-full 
+                hover:bg-blue-600 transition-all duration-200 active:scale-95
+                shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+    >
+      Active
+    </button>
 
-{/* Completed Tasks */}
-<button onClick={()=>setFilter('completed')} className="px-4 py-2 bg-green-500 ml-4 text-black  text-xl rounded hover:bg-green-600 active:scale-95 transition">
-  Completed
-</button>
+    {/* Completed Tasks */}
+    <button 
+      onClick={() => setFilter('completed')}
+      className="px-6 py-3 bg-green-500 text-white text-lg font-medium rounded-full 
+                hover:bg-green-600 transition-all duration-200 active:scale-95
+                shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-green-400"
+    >
+      Completed
+    </button>
 
-{/* New Tasks */}
-<button onClick={()=>setFilter('newTask')} className="px-4 py-2 bg-purple-600 ml-4 text-black  text-xl rounded hover:bg-purple-800 active:scale-95 transition">
-  New Task
-</button>
+    {/* New Tasks */}
+    <button 
+      onClick={() => setFilter('newTask')}
+      className="px-6 py-3 bg-purple-500 text-white text-lg font-medium rounded-full 
+                hover:bg-purple-600 transition-all duration-200 active:scale-95
+                shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-purple-400"
+    >
+      New Tasks
+    </button>
 
-{/* Failed Tasks */}
-<button onClick={()=>setFilter('failed')} className="px-4 py-2 bg-red-500 ml-4 text-black  text-xl rounded hover:bg-red-600 active:scale-95 transition">
-  Failed Task
-</button>
+    {/* Failed Tasks */}
+    <button 
+      onClick={() => setFilter('failed')}
+      className="px-6 py-3 bg-red-500 text-white text-lg font-medium rounded-full 
+                hover:bg-red-600 transition-all duration-200 active:scale-95
+                shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-red-400"
+    >
+      Failed Tasks
+    </button>
 
-{/* All Tasks */}
-<button onClick={()=>setFilter('all')} className="px-4 py-2 bg-sky-500 ml-4 text-black  text-xl rounded hover:bg-sky-600 active:scale-95 transition">
-  All Tasks
-</button>
-
-
-    </div>
+    {/* All Tasks */}
+    <button 
+      onClick={() => setFilter('all')}
+      className="px-6 py-3 bg-cyan-500 text-white text-lg font-medium rounded-full 
+                hover:bg-cyan-600 transition-all duration-200 active:scale-95
+                shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-cyan-400"
+    >
+      All Tasks
+    </button>
+  </div>
+</div>
 
     {/* Tasks List */}
     <div 
